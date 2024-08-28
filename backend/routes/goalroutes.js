@@ -6,6 +6,10 @@ router.get('/',getGoals)
 
 router.get('/',setGoals)
 
-//router.put
+router.put('/',(req,res) => {
+    res.json({
+        message: "menambahkan method put"
+    })    
+})
 
 module.exports = router
