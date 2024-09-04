@@ -4,7 +4,8 @@
 const express = require ('express');
 const app = express();
 const port = 5000;
-const logRequest = require('./middleware/errorMiddleware')
+const logRequest = require('./middleware/logs');
+const { errorHandler } = require('./middleware/errormiddleware.js');
 // testing APIs (Application Programming Interface)
 
 // app.use('/',(req,res) => {
@@ -35,3 +36,4 @@ app.listen(port, () => {
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(logRequest)
+app.use(errorHandler)

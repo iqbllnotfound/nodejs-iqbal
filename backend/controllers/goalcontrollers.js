@@ -4,9 +4,14 @@ const getGoals = (req,res) => {
     })
 }
 const setGoals = (req,res) => {
-    console.log(req)
+    if(!req.body){
+        res.status(400)
+        throw new Error ('inputkan data kalian')
+    }
+
     res.status (200). json ({
-        massage: "Set Goals"
+        massage: "Set Goals",
+        data: req.body
     })
 }
 const updateGoals = (req,res) => {
