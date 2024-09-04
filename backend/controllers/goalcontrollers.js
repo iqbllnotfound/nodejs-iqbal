@@ -11,12 +11,12 @@ const setGoals = (req,res) => {
 }
 const updateGoals = (req,res) => {
     res.status (200). json ({
-        massage: `Update Goal ${req.params.id}`
+        'massage': `Update Goal ${req.params.id}`
     })
 }
 const deleteGoals = (req,res) => {
     res.status (200). json ({
-        massage: `Delete Goal ${req.params.id}`
+        'massage': `Delete Goal ${req.params.id}`
     })
 }
 

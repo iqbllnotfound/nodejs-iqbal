@@ -4,7 +4,7 @@ const {getGoals,setGoals} = require ("../controllers/goalcontrollers")
 
 router.get('/',getGoals)
 
-router.get('/',setGoals)
+router.post('/',setGoals)
 
 router.put('/',(req,res) => {
     res.json({
