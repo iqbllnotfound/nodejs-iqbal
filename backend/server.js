@@ -32,3 +32,5 @@ app.listen(port, () => {
     // console.log(`Bagi duit dong ${port} aja`)
     console.log(`Server berjalan di port ${port}`)
 })
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
